@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style/style.css'
-import Counter  from './components/timer'
-
-
+// import './style.css';
+import TaskList from './components/TaskList';
 
 ReactDOM.render(
-    <Counter />,
+        <TaskList />,        
     document.getElementById('root')
 );
+
+
+
+
+

@@ -1,0 +1,33 @@
+.wrapperButtons{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.button{
+    width: 140px;
+    padding: 15px 5px 0 5px;
+    height: 40px;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer; 
+    font-size: 20px;
+    margin: 30px 20px;
+}
+.toDO{
+    background-color: rgb(20, 153, 241);
+    color: aliceblue;
+}
+.inProgress{
+    background-color: rgb(228, 156, 22);
+    color: aliceblue;
+}
+.done{
+    background-color: rgb(2, 144, 2);
+    color: aliceblue;
+}
+.resetFilter{
+    background-color: gray;
+    color: aliceblue;
+}
