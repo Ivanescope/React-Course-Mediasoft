@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './style.css'
 import deleteButton from '../../image/basketDelete.png'
+import { Link } from 'react-router-dom';
 
 class Task extends Component {
 
@@ -10,12 +11,12 @@ class Task extends Component {
   }
 
     render(){
-      const {name, description, group} = this.props.task;
+      const {name, description, group, id} = this.props.task;
       
     return(
         <article>
           <div className = 'taskItem'>
-            <div className = 'taskName'>{name}</div>
+            <div className = 'taskName'><Link to = {{pathname: `/list/${id}`}}>{name}</Link></div>
             <div className = 'taskDescription'><i className = 'nameDescription'>
               Описание:</i> {description}            
             </div>
