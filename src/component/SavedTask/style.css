@@ -1,0 +1,80 @@
+.restore-button{
+    border: 2px solid white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff; 
+    user-select: none; 
+    background: rgb(35, 207, 5); 
+    padding: .7em 1.5em;
+}
+.restore-button:hover { background: rgb(47, 184, 22); } 
+.restore-button:active { background: rgb(26, 102, 13); } 
+
+
+.header-task{
+    display: flex;
+    justify-content:space-between;
+    padding: 3px 0 0 0;
+
+}
+.star{
+    width: 30px;
+    height: 30px;
+}
+.name-task{
+    text-align: center;
+    font-size: 38px;
+    font-family: Monotype Corsiva;
+    font-weight: bold;
+}
+ .button-delete{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 5px 5px 0 0;
+}
+
+
+.article-task{
+    padding: 10px;
+    font-size: 20px;
+}
+.name-desc, .name-date, .name-group{
+    padding-right:5px; 
+    font-family: Century Gothic;
+    font-size: 20px;
+    text-decoration:underline aliceblue;
+    font-weight: bold;
+}
+
+.footer-task{
+    font-size: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

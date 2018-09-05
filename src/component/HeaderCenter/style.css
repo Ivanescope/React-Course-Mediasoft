@@ -1,0 +1,23 @@
+.header-main{
+    height: 165px;
+    color: aliceblue;
+    font-family: Impact;
+    font-size: 35px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.noon{
+    background: #c7b39b url(../../style/noon.jpg);
+}
+.evening{
+    background: #c7b39b url(../../style/evening.jpg);
+}
+.night{
+    background: #c7b39b url(../../style/night.jpg);
+}
+.morning{
+    background: #c7b39b url(../../style/morning.jpg);
+}
+.date-name{
+    padding-top: 90px;
+}

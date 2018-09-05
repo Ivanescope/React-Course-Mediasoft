@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  color:aliceblue;
+  background-image: url(../../style/Background.jpg);
+  background-size: cover;
+}
+
+/* App */
+.outerContainer{
+  display: flex;
+  flex-direction:row ;
+  justify-content:space-between;
+  height: 100vh;
+}
+.left{
+  flex-grow:1;
+  min-width: 300px;
+}
+.centr{
+  flex-grow:5;  
+}
+.right{
+  border-left:1px solid gray;
+  flex-grow:3;
+  max-width: 340px;
+}

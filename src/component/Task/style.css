@@ -1,0 +1,56 @@
+.header-task{
+    display: flex;
+    justify-content:space-between;
+    padding: 3px 0 0 0;
+
+}
+.star{
+    width: 30px;
+    height: 30px;
+}
+.name-task{
+    text-align: center;
+    font-size: 38px;
+    font-family: Monotype Corsiva;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button-edit, .button-delete{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 5px 5px 0 0;
+}
+
+
+.article-task{
+    padding: 10px;
+}
+.name-desc, .name-date, .name-group{
+    font-family: Century Gothic;
+    font-size: 20px;
+    text-decoration:underline aliceblue;
+    font-weight: bold;
+    padding-right:5px; 
+    cursor: default;
+}
+
+.footer-task{
+    font-size: 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+.container-task{
+    border: 3px solid aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    background: rgba(58, 8, 105, 0.3) linear-gradient(rgba(130, 13, 240, 0.3), rgba(58, 8, 105, 0.3));
+}
+
+a{
+    color:aliceblue;
+    text-decoration: none;
+}

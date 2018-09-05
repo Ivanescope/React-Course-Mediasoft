@@ -1,0 +1,39 @@
+.container-left-side{
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-right:1px solid gray;
+  height: 100vh;
+}
+.logo-container{
+  min-height: 250px;
+  margin: auto;
+  flex-grow:2;
+}
+.logo-img{
+  padding-left:22%;
+}
+.logo{
+  font-size: 55px;
+  font-weight: 700;
+  cursor:default;
+  font-family: Impact ;
+}
+.form{
+  min-height: 450px;
+  max-width: 200px;
+  flex-grow:3;
+}
+.footer{
+  text-align: center;
+  padding-top: 50px;
+  flex-grow:1;
+}
+.repository{
+  font-size: 20px;
+  font-weight: 600;
+}
+.repository-img{
+  padding-top: 10px;
+  cursor: pointer;
+}

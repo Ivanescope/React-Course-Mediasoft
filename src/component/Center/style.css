@@ -1,0 +1,16 @@
+.container-center{
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+}
+.header-center{
+  flex-grow:2;
+}
+
+.article-center{
+  flex-grow:4;
+  padding: 0 10px 20px 10px;
+}
+.filter-buttons{
+  flex-grow:1;
+}

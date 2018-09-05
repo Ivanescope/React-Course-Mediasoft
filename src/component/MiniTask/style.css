@@ -1,0 +1,11 @@
+.task-mini{
+    background: rgba(58, 8, 105, 0.2) linear-gradient(rgba(130, 13, 240, 0.2), rgba(58, 8, 105, 0.2));
+    font-family: Century Gothic;
+    border:1px solid aliceblue;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin-bottom:10px; 
+    justify-content:space-between;
+}

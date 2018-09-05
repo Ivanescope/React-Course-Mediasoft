@@ -1,0 +1,33 @@
+fieldset{
+    border:2px solid aliceblue;
+}
+legend{
+    font-size: 30px;
+    font-weight: bold;
+}
+.form{
+    font-size: 20px;
+    border-radius: 10px;
+}
+input, textarea{
+    padding:3px;
+}
+.addTaskButton{
+    position: relative;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(245,245,245);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+}
+
+.addTaskButton:hover{
+    cursor: pointer;
+}
