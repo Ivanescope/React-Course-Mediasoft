@@ -1,5 +1,5 @@
 export default function(){
     return {
-        type:'FILTER_DONE'
+        type: 'FILTER_DONE'
     }
 }

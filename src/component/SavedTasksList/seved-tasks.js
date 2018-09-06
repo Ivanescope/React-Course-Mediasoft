@@ -15,9 +15,12 @@ class SavedTasks extends Component {
 
     showListSavedTask(){
         return this.props.savedTasks.map(task => {
-            return (
-                <SavedTask key = {task.id} task = {task} />
-            )
+            if(task.isDeleted){
+                return (
+                    <SavedTask key = {task.id} task = {task} />
+                ) 
+            }
+            return null;
         });
     }
 
@@ -34,7 +37,7 @@ class SavedTasks extends Component {
 }
 function mapStateToProps(state){
     return {
-        savedTasks:state.tasks.savedTasks
+        savedTasks:state.changeTasks.allTasks
     }
 }
 

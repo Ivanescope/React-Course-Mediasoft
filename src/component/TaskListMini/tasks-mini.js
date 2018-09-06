@@ -10,7 +10,7 @@ class TasksMini extends Component {
         const day = (('' + this.props.day).length === 1) ? '0' + this.props.day : this.props.day;
         return this.props.tasks.map(task => {
             const date = this.props.year + '-' + month + '-' + day; 
-            if(date === task.date){
+            if(date === task.date && !task.isDeleted){
                 return (
                     < MiniTask key = {task.id} task = {task} />
                 )
@@ -32,7 +32,7 @@ class TasksMini extends Component {
 
 function mapSTateToProps(state){
     return {
-        tasks:state.tasks.allTasks
+        tasks:state.changeTasks.allTasks
     }
 }
 

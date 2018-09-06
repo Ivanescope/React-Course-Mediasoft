@@ -77,8 +77,9 @@ showModalWindow(){
 }
 
 function mapStateToProps(){
-    return {}
+    return {};
 }
+
 function matchDispatchToProps(dispatch){
     return bindActionCreators({transferTask: transferTask}, dispatch)
 }

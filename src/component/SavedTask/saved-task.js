@@ -56,8 +56,8 @@ class SavedTask extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return {    }
+function mapStateToProps(){
+    return {};
 }
 
 function matchDispatchToProps(dispatch){

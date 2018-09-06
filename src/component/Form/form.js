@@ -31,7 +31,7 @@ class Form extends Component {
 
 
   addTask(e){
-    if(!this.state.nameTask.length < 1 && !this.state.deskTask.length < 1){
+    if(!this.state.nameTask.length < 1 && !this.state.deskTask.length < 1 && !this.state.dateTask.length < 1 ){
       e.preventDefault(); 
       let newTask = {
         id: new Date().getTime(),
@@ -39,7 +39,8 @@ class Form extends Component {
         description: this.state.deskTask,
         group: this.state.groupTask ,
         date: this.state.dateTask,
-        favorite: this.state.favoriteTask
+        favorite: this.state.favoriteTask,
+        isDeleted:false
       }
       this.props.addTask(newTask)
       this.setState({
@@ -89,6 +90,7 @@ class Form extends Component {
                   <div>
                     <input type = 'date' 
                       name = 'dateTask' 
+                      required
                       value = {this.state.dateTask} 
                       onChange = {this.onInputChange}
                     />
@@ -126,16 +128,13 @@ class Form extends Component {
   }
 }
 
-
-function mapStateToProps(state){
-  return {
-    idLastTask: state.tasks.allTasks.length ? state.tasks.allTasks.length : 1
-  }
+function mapStateToProps() {
+  return {};
 }
 
-function matchStateToProps(dispatch){
+function matchDispatchToProps(dispatch){
   return bindActionCreators({addTask: addTask}, dispatch);
 }
 
 
-export default connect(mapStateToProps, matchStateToProps)(Form);
+export default connect(mapStateToProps, matchDispatchToProps)(Form);

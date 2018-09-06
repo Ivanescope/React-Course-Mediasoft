@@ -45,7 +45,7 @@ class Task extends Component {
 }
 function mapStateToProps(state){
     return {
-        tasks:state.tasks.allTasks
+        tasks:state.changeTasks.allTasks
     }
 }
 

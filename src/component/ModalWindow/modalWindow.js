@@ -124,13 +124,14 @@ render(){
     )
 }
 }
-function mapStateToProps(state){
-    return {}
+
+function mapStateToProps(){
+    return {};
 }
 
-function matchStateToProps(dispatch){
+function matchDispatchToProps(dispatch){
     return bindActionCreators({editTask: editTask}, dispatch);
 }
 
 
-export default connect(mapStateToProps, matchStateToProps)(ModalWindow);
+export default connect(mapStateToProps, matchDispatchToProps)(ModalWindow);

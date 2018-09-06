@@ -7,6 +7,7 @@ import importantTasks from '../../action/importantTask';
 import filterToDo from '../../action/filterToDo';
 import filterIsProgress from '../../action/filterInProgress';
 import filterDone from '../../action/filterDone';
+import resetFilters from '../../action/resetFilters';
 
 
 class HeaderCenter extends Component {
@@ -19,7 +20,7 @@ class HeaderCenter extends Component {
     this.filterToDo = this.filterToDo.bind(this);
     this.filterIsProgress = this.filterIsProgress.bind(this);
     this.filterDone = this.filterDone.bind(this);
-
+    this.resetFilters = this.resetFilters.bind(this);
   }
 
   showImportantTasks(){
@@ -38,6 +39,10 @@ class HeaderCenter extends Component {
   filterDone(){
     this.props.filterDone();
   }
+  resetFilters(){
+    this.props.resetFilters();
+  }
+
 
   render() {
     return (
@@ -50,15 +55,15 @@ class HeaderCenter extends Component {
         <div className = 'second-line-filters'>
           <div className = 'button red' onClick = {this.sortAlphabet}>По алфавиту</div>
           <div className = 'button yellow' onClick = {this.showImportantTasks}>Важные</div>
-          <div className = 'button '>Сбросить фильтры</div>
+          <div className = 'button ' onClick = {this.resetFilters}>Сбросить фильтры</div>
         </div>
       </div>      
     )
   }
 }
 
-function mapStateToProps(state){
-  return {    }
+function mapStateToProps() {
+  return {};
 }
 
 function matchDispatchToProps(dispatch){
@@ -67,7 +72,8 @@ function matchDispatchToProps(dispatch){
     importantTasks: importantTasks,
     filterToDo: filterToDo,
     filterIsProgress: filterIsProgress,
-    filterDone: filterDone
+    filterDone: filterDone,
+    resetFilters: resetFilters
   }, dispatch);
 }
 

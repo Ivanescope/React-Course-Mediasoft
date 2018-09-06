@@ -29,7 +29,7 @@ showModalWindow(){
     this.setState({isActiveModalWindow: true});
 }
 
-  render() {
+render() {
     return ( 
         <div className = 'task-mini' key = {this.props.task.id}>
         {this.state.isActiveModalWindow ?
@@ -46,12 +46,13 @@ showModalWindow(){
             </div>
         </div>
     )
-  }
+}
 }
 
 function mapStateToProps(){
-    return {}
+    return {};
 }
+
 function matchDispatchToProps(dispatch){
     return bindActionCreators({
         transferTask: transferTask
