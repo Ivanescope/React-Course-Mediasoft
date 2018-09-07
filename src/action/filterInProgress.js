@@ -1,5 +1,6 @@
 export default function(){
     return {
-        type:'FILTER_IS_PROPGRESS'
+        type:'SET_VISIBILITY_FILTER',
+        payload:'FILTER_IS_PROPGRESS'
     }
 }

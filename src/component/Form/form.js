@@ -31,7 +31,14 @@ class Form extends Component {
 
 
   addTask(e){
-    if(!this.state.nameTask.length < 1 && !this.state.deskTask.length < 1 && !this.state.dateTask.length < 1 ){
+    const minYear = '2015';
+    const maxYear = '2021';
+    if(!this.state.nameTask.length < 1 
+      && !this.state.deskTask.length < 1 
+      && !this.state.dateTask.length < 1
+      && this.state.dateTask.slice(0,4) <= maxYear
+      && this.state.dateTask.slice(0,4) >= minYear
+     ){
       e.preventDefault(); 
       let newTask = {
         id: new Date().getTime(),
@@ -93,6 +100,8 @@ class Form extends Component {
                       required
                       value = {this.state.dateTask} 
                       onChange = {this.onInputChange}
+                      min = "2015-01-01"
+                      max = "2021-12-31" 
                     />
                   </div>
                 </label>

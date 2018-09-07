@@ -8,16 +8,17 @@
 .second-line-filters{
     display: flex;
     justify-content:space-between;
+
 }
 .button{
+    width: 100%;
     cursor: pointer;
-    min-width: 200px;
     margin: 5px;
     position: relative;
     display: inline-block;
     font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     color: rgb(245,245,245);
     text-decoration: none;
     user-select: none;
@@ -37,8 +38,9 @@
 .red{
     background-color:rgba(255, 0, 0, 0.58);
 }
-.button4{
+.green{
     background-color:rgba(153, 255, 1, 0.58);
+    min-width: 200px;
 }
 
 

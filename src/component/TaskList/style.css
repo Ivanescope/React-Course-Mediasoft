@@ -1,6 +1,13 @@
 .other-container-task{
-    height: 620px;
+    height: 530px;
     overflow-y: scroll;
     border:3px solid aliceblue;
     padding: 15px;
+}
+.infoTodosNone{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 50px;
+    color: aliceblue;
 }

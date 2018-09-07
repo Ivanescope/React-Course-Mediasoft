@@ -27,10 +27,14 @@ class SavedTasks extends Component {
     render() {
         return (
             <div>
-                <Link to = '/'>
-                    <div className = 'text-to-main'>На главную</div>
-                </Link>
-                {this.showListSavedTask()}
+                <div className = 'text-to-main'>
+                    <Link to = '/'>
+                        На главную
+                    </Link>
+                </div>
+                <div className = 'container-saved-list'>
+                    {this.showListSavedTask()}
+                </div>
             </div>
         )
     }

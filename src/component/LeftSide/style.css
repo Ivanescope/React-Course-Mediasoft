@@ -23,6 +23,7 @@
   min-height: 450px;
   max-width: 200px;
   flex-grow:3;
+  margin-left: 3.5%;
 }
 .footer{
   text-align: center;

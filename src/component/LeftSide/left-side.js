@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 import logo from '../../style/Logo.png';
 import repository from '../../style/Repo.png';
-import { Link } from 'react-router-dom';
 import Form from '../Form';
 
 

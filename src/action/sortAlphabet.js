@@ -1,5 +1,6 @@
 export default function(){
     return {
-        type:'SORT_ALPHABET'
+        type:'SET_VISIBILITY_FILTER',
+        payload:'SORT_ALPHABET'
     }
 }

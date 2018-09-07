@@ -1,5 +1,6 @@
 export default function(){
     return {
-        type:'FILTER_TO_DO'
+        type:'SET_VISIBILITY_FILTER',
+        payload:'FILTER_TO_DO'
     }
 }

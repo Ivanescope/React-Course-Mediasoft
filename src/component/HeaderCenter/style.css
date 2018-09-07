@@ -1,5 +1,5 @@
 .header-main{
-    height: 165px;
+    height: 145px;
     color: aliceblue;
     font-family: Impact;
     font-size: 35px;
@@ -8,16 +8,20 @@
 }
 .noon{
     background: #c7b39b url(../../style/noon.jpg);
+    background-size:100% 185px;
 }
 .evening{
     background: #c7b39b url(../../style/evening.jpg);
+    background-size:100% 185px;
 }
 .night{
     background: #c7b39b url(../../style/night.jpg);
+    background-size:100% 185px;
 }
 .morning{
     background: #c7b39b url(../../style/morning.jpg);
+    background-size:100% 185px;
 }
 .date-name{
-    padding-top: 90px;
+    padding-top: 70px;
 }

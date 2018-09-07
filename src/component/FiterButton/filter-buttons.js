@@ -8,6 +8,7 @@ import filterToDo from '../../action/filterToDo';
 import filterIsProgress from '../../action/filterInProgress';
 import filterDone from '../../action/filterDone';
 import resetFilters from '../../action/resetFilters';
+import showTodayTasks from '../../action/showTodayTasks';
 
 
 class HeaderCenter extends Component {
@@ -21,6 +22,7 @@ class HeaderCenter extends Component {
     this.filterIsProgress = this.filterIsProgress.bind(this);
     this.filterDone = this.filterDone.bind(this);
     this.resetFilters = this.resetFilters.bind(this);
+    this.showTodayTasks = this.showTodayTasks.bind(this);
   }
 
   showImportantTasks(){
@@ -42,7 +44,9 @@ class HeaderCenter extends Component {
   resetFilters(){
     this.props.resetFilters();
   }
-
+  showTodayTasks(){
+    this.props.showTodayTasks();
+  }
 
   render() {
     return (
@@ -51,10 +55,11 @@ class HeaderCenter extends Component {
           <div className = 'button blue' onClick = {this.filterToDo}>Выполнить</div>
           <div className = 'button blue' onClick = {this.filterIsProgress}>Выполняется</div>
           <div className = 'button blue' onClick = {this.filterDone}>Выполнено</div>
+          <div className = 'button yellow' onClick = {this.showImportantTasks}>Важные</div>
         </div>
         <div className = 'second-line-filters'>
           <div className = 'button red' onClick = {this.sortAlphabet}>По алфавиту</div>
-          <div className = 'button yellow' onClick = {this.showImportantTasks}>Важные</div>
+          <div className = 'button green' onClick = {this.showTodayTasks}>Задачи на сегодня</div>
           <div className = 'button ' onClick = {this.resetFilters}>Сбросить фильтры</div>
         </div>
       </div>      
@@ -73,7 +78,8 @@ function matchDispatchToProps(dispatch){
     filterToDo: filterToDo,
     filterIsProgress: filterIsProgress,
     filterDone: filterDone,
-    resetFilters: resetFilters
+    resetFilters: resetFilters,
+    showTodayTasks: showTodayTasks
   }, dispatch);
 }
 

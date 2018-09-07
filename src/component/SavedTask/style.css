@@ -9,8 +9,12 @@
     background: rgb(35, 207, 5); 
     padding: .7em 1.5em;
 }
-.restore-button:hover { background: rgb(47, 184, 22); } 
-.restore-button:active { background: rgb(26, 102, 13); } 
+.restore-button:hover { 
+    background: rgb(47, 184, 22); 
+} 
+.restore-button:active { 
+    background: rgb(26, 102, 13); 
+} 
 
 
 .header-task{

@@ -12,17 +12,14 @@ class TaskList extends Component {
 
 
     showList(){
-        const curentMonth = 1 + new Date().getMonth() + '';
-        const day = (('' + new Date().getDate()).length === 1) ? '0' + new Date().getDate() : new Date().getDate();
-        const month = (curentMonth.length === 1) ? '0' + curentMonth : curentMonth;
+        if(!this.props.tasks.length){
+            return <div className = 'infoTodosNone'>На сегодня нет запланированных задач </div>
+        }
         return this.props.tasks.map((task) => {
-            const currentDate = new Date().getFullYear() + '-' + month + '-' + day;
-            if(task.date === currentDate && !task.isDeleted){
-                return <Task key = {task.id} task = {task}/>
-            }
-            return null;
+            return <Task key = {task.id} task = {task}/>
         });
     }
+
 
     render() {
         return (
@@ -35,32 +32,38 @@ class TaskList extends Component {
 
 const getVisibleTodos = (todos, filter) => {
     switch (filter) {
-    case 'FILTER_DONE':
-        return todos.filter(task => task.group === 'Выполнено');
-    case 'FILTER_TO_DO':
-        return todos.filter(task => task.group === 'Выполнить');
-    case 'FILTER_IS_PROPGRESS':
-        return todos.filter(task => task.group === 'Выполняется');
-    case 'IMPORTANT_TASKS':
-            const nextTodos = todos.slice();
-            return nextTodos.sort(task => {
-            if(!task.favorite) return 1;
+        case 'FILTER_DONE':
+            return todos.filter(task => task.group === 'Выполнено');
+        case 'FILTER_TO_DO':
+            return todos.filter(task => task.group === 'Выполнить');
+        case 'FILTER_IS_PROPGRESS':
+            return todos.filter(task => task.group === 'Выполняется');
+        case 'IMPORTANT_TASKS':
+                const nextTodos = todos.slice();
+                return nextTodos.sort(task => {
+                if(!task.favorite) return 1;
+                    return -1;
+                }); 
+        case 'SORT_ALPHABET': 
+            const updateTodos = todos.slice();
+            return updateTodos.sort((first, second) => {
+                if(first.name.toLocaleLowerCase() > second.name.toLocaleLowerCase()){
+                    return 1;
+                } 
                 return -1;
-            }); 
-    case 'SORT_ALPHABET': 
-        const updateTodos = todos.slice();
-        return updateTodos.sort((first, second) => {
-            if(first.name.toLocaleLowerCase() > second.name.toLocaleLowerCase()){
-                return 1;
-            } 
-            return -1;
-        })
-    case 'RESET_FILTERS':
-        return todos;
-      
-    default:
-        return todos;
-    }
+            })
+        case 'SHOW_TODAY_TASKS':
+            const curentMonth = 1 + new Date().getMonth() + '';
+            const day = (('' + new Date().getDate()).length === 1) ? '0' + new Date().getDate() : new Date().getDate();
+            const month = (curentMonth.length === 1) ? '0' + curentMonth : curentMonth;
+            return todos.filter((task) => {
+                const currentDate = new Date().getFullYear() + '-' + month + '-' + day;
+                return task.date === currentDate && !task.isDeleted; 
+            });
+    
+        default:
+            return todos.filter(task => !task.isDeleted);
+        }
   };
 
 

@@ -45,6 +45,5 @@ export default {
             favorite: false,
             isDeleted:false
         }
-    ],
-    visibilityFilter:'SHOW_ALL'
+    ]  
 }

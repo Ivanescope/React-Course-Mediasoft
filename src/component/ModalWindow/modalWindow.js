@@ -63,7 +63,7 @@ render(){
                         <div>
                             <label >Название задачи:
                                 <input type = 'text'
-                                    id= 'MWname' 
+                                    id = 'MWname' 
                                     name = 'nameTask' 
                                     value = {this.state.nameTask} 
                                     onChange = {this.onInputChangeTask}/>

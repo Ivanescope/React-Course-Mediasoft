@@ -36,13 +36,15 @@ showModalWindow(){
   render() {
     return ( 
         <div className = 'container-task' >
-        {this.state.isActiveModalWindow ?
+        {
+            this.state.isActiveModalWindow ?
             <ModalWindow closeModalWindow = {this.closeModalWindow} task = {this.props.task}/> :
             null
         }
             <div className = 'header-task'>
                 <div>
-                    {this.props.task.favorite ?
+                    {
+                        this.props.task.favorite ?
                         <img src = {star} className = 'star'alt = 'star' /> :
                         null
                     }
@@ -54,11 +56,13 @@ showModalWindow(){
                     <img src = {editButton} 
                         className = 'button-edit' 
                         alt = 'edit' 
-                        onClick = {this.showModalWindow}/>
+                        onClick = {this.showModalWindow}
+                    />
                     <img src = {deleteButton} 
                         className = 'button-delete' 
                         alt = 'delete' 
-                        onClick = {this.transferTask}/>
+                        onClick = {this.transferTask}
+                    />
                 </div>
             </div>
             <div className = 'article-task'>

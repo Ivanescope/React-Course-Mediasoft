@@ -48,6 +48,7 @@
     height: 50px;
     font-size: 30px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif
 }
 #MWname{
     width:100%;
@@ -62,9 +63,17 @@
 }
 .MWName{
     padding: 0 35px 0 30px;
+    text-align:left;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif
 }
 .MWdescription{
     padding: 0 35px 0 30px;
+    text-align:left;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif
 }
 .MWDate{
     width:250px;
@@ -87,6 +96,11 @@
     flex-direction:row;
     justify-content:space-between;
     padding: 10px 28px 0 30px;
+    
+    text-align: left;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif
 }
 
 
@@ -110,4 +124,8 @@
 }
 .favorites{
     padding: 20px 35px 0 30px;
+    text-align:left;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif
 }
