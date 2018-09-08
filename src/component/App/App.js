@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import LeftSide from '../LeftSide';
+import LeftSidebar from '../LeftSidebar';
 import Center from '../Center';
 import RightSide from '../RightSide';
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className = 'outerContainer'>
         <div className = 'left'>
-          <LeftSide />
+          <LeftSidebar />
         </div>
         <div className = 'centr'>
           <Center />

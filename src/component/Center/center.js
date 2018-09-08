@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import './style.css';
 import TaskList from '../TaskList';
 import HeaderCenter from '../HeaderCenter';
-import Filter from '../FiterButton';
+import FilterButtons from '../FiterButtons';
 
 
 class Center extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isToday:false
+    }
+  }
+  changeToggle = (value) => {
+    this.setState({isToday: value});
+  }
+
   render() {
     return (
       <div className = 'container-center'>
@@ -13,10 +23,10 @@ class Center extends Component {
             <HeaderCenter />
           </div>
           <div className = 'filter-buttons'>
-            <Filter />
+            <FilterButtons changeToggle = {this.changeToggle} isToday = {this.state.isToday}/>
           </div>
           <div className = 'article-center'>
-            <TaskList />
+            <TaskList isToday = {this.state.isToday}/>
           </div>
       </div>
     )

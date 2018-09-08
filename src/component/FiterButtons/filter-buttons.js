@@ -43,12 +43,17 @@ class HeaderCenter extends Component {
   }
   resetFilters(){
     this.props.resetFilters();
+    this.props.changeToggle(false)
   }
   showTodayTasks(){
     this.props.showTodayTasks();
+    this.props.changeToggle(true)
   }
 
   render() {
+    const myStyle = {
+      border: '5px solid aliceblue'
+    }
     return (
       <div className = 'container-filter'>
         <div className = 'first-line-filters'>
@@ -59,7 +64,7 @@ class HeaderCenter extends Component {
         </div>
         <div className = 'second-line-filters'>
           <div className = 'button red' onClick = {this.sortAlphabet}>По алфавиту</div>
-          <div className = 'button green' onClick = {this.showTodayTasks}>Задачи на сегодня</div>
+          <div className = 'button green' onClick = {this.showTodayTasks} style = {this.props.isToday ? myStyle : null}>Задачи на сегодня</div>
           <div className = 'button ' onClick = {this.resetFilters}>Сбросить фильтры</div>
         </div>
       </div>      

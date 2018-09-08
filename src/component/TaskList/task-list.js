@@ -15,6 +15,22 @@ class TaskList extends Component {
         if(!this.props.tasks.length){
             return <div className = 'infoTodosNone'>На сегодня нет запланированных задач </div>
         }
+
+        if(this.props.isToday){
+            const curentMonth = 1 + new Date().getMonth() + '';
+            const day = (('' + new Date().getDate()).length === 1) ? '0' + new Date().getDate() : new Date().getDate();
+            const month = (curentMonth.length === 1) ? '0' + curentMonth : curentMonth;
+            let todos = this.props.tasks.filter((task) => {
+                const currentDate = new Date().getFullYear() + '-' + month + '-' + day;
+                return task.date === currentDate && !task.isDeleted; 
+            });
+            return todos.map((task) => {
+                return <Task key = {task.id} task = {task}/>
+            });
+        }
+
+
+        
         return this.props.tasks.map((task) => {
             return <Task key = {task.id} task = {task}/>
         });
@@ -31,6 +47,7 @@ class TaskList extends Component {
 }
 
 const getVisibleTodos = (todos, filter) => {
+    todos = todos.filter(task => !task.isDeleted);
     switch (filter) {
         case 'FILTER_DONE':
             return todos.filter(task => task.group === 'Выполнено');
@@ -52,17 +69,9 @@ const getVisibleTodos = (todos, filter) => {
                 } 
                 return -1;
             })
-        case 'SHOW_TODAY_TASKS':
-            const curentMonth = 1 + new Date().getMonth() + '';
-            const day = (('' + new Date().getDate()).length === 1) ? '0' + new Date().getDate() : new Date().getDate();
-            const month = (curentMonth.length === 1) ? '0' + curentMonth : curentMonth;
-            return todos.filter((task) => {
-                const currentDate = new Date().getFullYear() + '-' + month + '-' + day;
-                return task.date === currentDate && !task.isDeleted; 
-            });
     
         default:
-            return todos.filter(task => !task.isDeleted);
+            return todos
         }
   };
 
@@ -70,7 +79,7 @@ const getVisibleTodos = (todos, filter) => {
 
 function mapStateToProps(state){
     return{
-        tasks:getVisibleTodos(state.changeTasks.allTasks, state.filtersTasks)
+        tasks: getVisibleTodos(state.changeTasks.allTasks, state.filtersTasks),
     }
 }
 

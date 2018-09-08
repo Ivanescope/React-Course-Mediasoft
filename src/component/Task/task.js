@@ -16,7 +16,6 @@ constructor(props){
         isActiveModalWindow:false
     }
 
-
     this.transferTask = this.transferTask.bind(this);
     this.showModalWindow = this.showModalWindow.bind(this);
     this.closeModalWindow = this.closeModalWindow.bind(this);
